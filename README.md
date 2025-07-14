@@ -65,6 +65,25 @@ Each player has **one Power Bomb** per game:
 - **Can Move Through**: Temporarily allows movement through those walls on the same turn
 - **Strategic Use**: Ideal for escaping traps or reclaiming wall inventory
 
+---
+
+## 📎 Project Links
+
+🎥 Presentation & Game Demo Videos
+**Google Drive Folder (Both videos):**
+https://drive.google.com/drive/folders/1h3rZ3PVH0aXc0yB0Sw9qHhV9-MFXLwyW?usp=sharing
+
+**YouTube – Project Presentation:**
+https://youtu.be/z-LJ28UVD9Y
+
+**YouTube – Game Demo:**
+https://youtu.be/R8Zjumhq8HQ
+
+**🖼️ Presentation Slide Deck**
+https://www.canva.com/design/DAGsHLvYAU4/mR-bhfZ2lCyryQAUUXdXHQ/view?utm_content=DAGsHLvYAU4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6a7fb68f7c
+
+---
+
 
 ## 📜 License
 
