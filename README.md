@@ -65,17 +65,6 @@ Each player has **one Power Bomb** per game:
 - **Can Move Through**: Temporarily allows movement through those walls on the same turn
 - **Strategic Use**: Ideal for escaping traps or reclaiming wall inventory
 
----
-
-## 🧪 Future Improvements
-
-- Refactor code to separate logic and UI  
-- Improve code readability and modularity  
-- Add unit tests and test coverage  
-- Enhance UI and animations  
-- Fix performance issues at very high difficulty levels
-
----
 
 ## 📜 License
 
