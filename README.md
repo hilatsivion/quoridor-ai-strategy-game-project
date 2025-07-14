@@ -1,61 +1,90 @@
-# QUORIDOR
+# 🎮 Quoridor AI – Strategic Game with Classic AI
 
-This program implements a classic AI (no _deep learning_) [Quoridor](https://en.wikipedia.org/wiki/Quoridor) player using a
-[minimax algorithm](https://en.wikipedia.org/wiki/Minimax) with [Alpha-Beta](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning) pruning.
+This project implements an advanced AI opponent for the strategy game **Quoridor**, using classical search algorithms (not deep learning). The player competes against an AI that uses the **Minimax algorithm with Alpha-Beta Pruning** to determine its optimal moves.
 
-The heuristic function used is the actual minimum distance from the player pawn to the goal.
+The project was developed as part of the final assignment in the course  
+**"Advanced Algorithms for Planning and Scheduling Intelligent Systems"**.
 
-## Requirements
+---
 
-This program was first implemented in python 2.6, and now ported to python 3.x. There's no testing (TDD, Unit testing),
-so some bugs might have been introduced. I've tested (QA) the ported program playing against it and seems to behave
-fairy well.
+## 🧠 What Makes Our Game Unique?
 
- * Python 3.x
- * Pygame==1.9.6
- 
-## Installation
+Beyond the standard Quoridor mechanics, we've added:
+- **Power Bomb (🧨)** – a strategic special move that destroys surrounding walls
+- **Dynamic difficulty** – board size changes based on difficulty level
+- **AI Opponent** – thinks multiple steps ahead and adapts to changes in the game
+- **Loop detection & caching** – for efficient and smart decision-making
 
-No installation needed. Just run the script with `python quoridor.py`
+---
 
-## Usage
+## ⚙️ Algorithms Used
 
-Just run it with `python quoridor.py -l LEVEL`. Level parameter is optional, ans must is a number (defaults to 0 if no
-specified). The higher the harder (deeper ahead analysis), but more time and memory required.
+- **Minimax with Alpha-Beta Pruning** – to evaluate the best possible move from the current state
+- **Custom Evaluation Function** – considers shortest path to goal, player progress, penalties for looping, and distance from opponent
+- **Memoization (caching)** – stores previously evaluated board states to avoid redundant calculations
+- **Loop Detection** – prevents repetitive moves that lead to game stagnation
 
-### Special Moves
+---
 
-**Power Bomb** 🧨: Each player starts with one power bomb that can be activated by pressing the **SPACEBAR**. 
+## 🖥️ Technologies Used
 
-- **Area of Effect**: Destroys all walls in a 3x3 grid (9 squares) centered on the player
-- **Wall Return**: All destroyed walls are returned to their original owners
-- **Usage**: One-time use per player per game
-- **Strategy**: Use strategically to clear blocked paths or reclaim your walls
+- **Language**: Python 3.x  
+- **Graphics & UI**: [Pygame](https://www.pygame.org/) (version 1.9.6)
 
-### Controls
+---
 
-- **Mouse**: Click to move pawn or place walls
-- **SPACEBAR**: Use power bomb (if available)
-- **ESC**: Exit game
+## 🚀 How to Run
 
-## TO DO
+1. Clone the repository  
+2. Make sure you have Python 3.x and Pygame installed  
+3. Run the game with:
 
-Many improvements pending:
+```bash
+python quoridor.py -l [LEVEL]
+```
 
- * The program was intended to be decoupled (UI separated from the rest). Indeed there's (now lost) version which used
-XMLRPC to play remotely using HTTP. This will allow to AIs to play separately, or two players, or relocate the AI player
-in a server.
+- The `LEVEL` is optional and determines AI difficulty (higher = smarter but slower).
+- Default is level 0 if not specified.
 
- * Many refacts pending (i.e. decouple the UI from the rest)
- 
- * Modernize the python code.
- 
- * Improve code quality.
- 
- * Testing
- 
- * There's a bug for higher levels still not fixed. The program might play worse (?) or even crash.
+---
 
-## License
+## 🎮 Controls
 
-[GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+- 🖱 **Mouse**: Click to move the player or place walls  
+- ⎵ **SPACEBAR**: Activate power bomb (if available)  
+- ⎋ **ESC**: Exit the game
+
+---
+
+## 💥 Special Feature: Power Bomb
+
+Each player has **one Power Bomb** per game:
+
+- **Effect**: Destroys all walls in a 3x3 area around the player
+- **Walls Return**: Destroyed walls are returned to their original owners
+- **Can Move Through**: Temporarily allows movement through those walls on the same turn
+- **Strategic Use**: Ideal for escaping traps or reclaiming wall inventory
+
+---
+
+## 📎 Project Links
+
+🎥 Presentation & Game Demo Videos
+**Google Drive Folder (Both videos):**
+https://drive.google.com/drive/folders/1h3rZ3PVH0aXc0yB0Sw9qHhV9-MFXLwyW?usp=sharing
+
+**YouTube – Project Presentation:**
+https://youtu.be/z-LJ28UVD9Y
+
+**YouTube – Game Demo:**
+https://youtu.be/R8Zjumhq8HQ
+
+**🖼️ Presentation Slide Deck**
+https://www.canva.com/design/DAGsHLvYAU4/mR-bhfZ2lCyryQAUUXdXHQ/view?utm_content=DAGsHLvYAU4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6a7fb68f7c
+
+---
+
+
+## 📜 License
+
+This project is licensed under the [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).
